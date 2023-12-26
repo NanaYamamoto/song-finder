@@ -1,0 +1,18 @@
+header {
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+
+    hr {
+        margin-top: 20px;
+    }
+}
+
+#container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 80%;
+    margin: 10px auto
+}
