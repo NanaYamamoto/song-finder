@@ -1,7 +1,13 @@
+body {
+  background-color: rgb(255, 255, 230);
+}
+
 header {
   text-align: center;
   margin: 30px;
   padding: 20px;
+  font-family: "Barlow", sans-serif;
+  font-family: "Playfair Display", serif;
 }
 header hr {
   margin-top: 20px;
@@ -14,4 +20,18 @@ header hr {
   text-align: center;
   width: 80%;
   margin: 10px auto;
+  font-family: "Barlow", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+}
+
+.item {
+  width: 30%;
+  margin-bottom: 30px;
+}
+.item img {
+  width: 50%;
+  height: 170px;
+  border: 1px solid rgb(245, 213, 8);
+  box-shadow: 5px 5px 5px rgb(226, 221, 91);
 }/*# sourceMappingURL=styles.css.map */
