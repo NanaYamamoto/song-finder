@@ -9,6 +9,11 @@ header {
   font-family: "Barlow", sans-serif;
   font-family: "Playfair Display", serif;
 }
+@media screen and (max-width: 555px) {
+  header input {
+    width: 100%;
+  }
+}
 header hr {
   margin-top: 20px;
 }
@@ -16,7 +21,7 @@ header hr {
 #container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
   width: 80%;
   margin: 10px auto;
@@ -24,14 +29,19 @@ header hr {
   font-family: "Playfair Display", serif;
   font-weight: 300;
 }
+@media screen and (max-width: 1080px) {
+  #container {
+    width: 90%;
+  }
+}
 
 .item {
-  width: 30%;
+  width: 300px;
   margin-bottom: 30px;
 }
 .item img {
-  width: 50%;
-  height: 170px;
+  width: 60%;
+  height: 180px;
   border: 1px solid rgb(245, 213, 8);
   box-shadow: 5px 5px 5px rgb(226, 221, 91);
 }/*# sourceMappingURL=styles.css.map */

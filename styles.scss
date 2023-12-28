@@ -1,3 +1,5 @@
+@import 'mixin';
+
 body {
     background-color: rgb(255, 255, 230);
 }
@@ -9,6 +11,11 @@ header {
     font-family: 'Barlow', sans-serif;
     font-family: 'Playfair Display', serif;
 
+    input {
+        @include mobile {
+            width: 100%;
+        }
+    }
 
     hr {
         margin-top: 20px;
@@ -18,22 +25,26 @@ header {
 #container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
     width: 80%;
     margin: 10px auto;
     font-family: 'Barlow', sans-serif;
     font-family: 'Playfair Display', serif;
     font-weight: 300;
+
+    @include pc {
+        width: 90%;
+    }
 }
 
 .item {
-    width: 30%;
+    width: 300px;
     margin-bottom: 30px;
 
     img {
-        width: 50%;
-        height: 170px;
+        width: 60%;
+        height: 180px;
         border: 1px solid rgb(245, 213, 8);
         box-shadow: 5px 5px 5px rgb(226, 221, 91);
 

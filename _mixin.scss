@@ -1,0 +1,22 @@
+//ブレイクポイント
+$pc: 1080px;
+$tab: 770px;
+$mobile: 555px;
+
+@mixin pc {
+    @media screen and (max-width: ($pc)) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (max-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: ($mobile)) {
+        @content;
+    }
+}
