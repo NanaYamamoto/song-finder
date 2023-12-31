@@ -11,31 +11,72 @@
         #container2 {
             display: grid;
             background: lightgreen;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            /* grid-template-columns: repeat(4, 1fr); */
+            grid-template-areas: "header header"
+                "content sidebar"
+                "footer footer";
+            grid-template-columns: 3fr 1fr;
+            /* grid-template-rows: repeat(3, 1fr); */
+            grid-template-rows: 1fr 3fr 1fr;
             /* grid-column-gap: 10px; */
             /* column-gap: 10px;
             row-gap: 10px; */
-            gap: 20px 10px;
-
+            /* gap: 20px 10px;  */
+            grid-gap: 10px;
 
         }
 
         .item2 {
             background: lightcoral;
-            padding: 30px;
+            /* padding: 30px; */
+            height: 60px;
 
         }
 
+
         .item3 {
             background: lightblue;
-            /* grid-row-start: 2;
-            grid-row-end: 4;
-            grid-column-start: 3;
-            grid-column-end: 5; */
-            /* grid-row: 2/4;
-            grid-column: 3/5; */
-            grid-area: 2/3/4/5;
+            /* grid-row-start: row-start;
+            grid-row-end: row-end 4;
+            grid-column-start: col-start;
+            grid-column-end: col-end2; */
+            justify-self: end;
+            align-self: end;
+
+        }
+
+        header,
+        main,
+        aside,
+        footer {
+            border: 1px dashed;
+        }
+
+        header {
+            grid-column: header;
+            grid-row: header;
+        }
+
+        main {
+            grid-column: content;
+            grid-row: content;
+            display: grid;
+            grid-gap: 5px;
+            /* grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1fr); */
+            height: 1200px;
+            /* justify-items: center;
+            align-items: center; */
+        }
+
+        aside {
+            grid-column: sidebar;
+            grid-row: sidebar;
+        }
+
+        footer {
+            grid-column: footer;
+            grid-row: footer;
         }
     </style>
 </head>
@@ -43,20 +84,26 @@
 <body>
 
     <div id="container2">
-        <article class="item3">Item1</article>
-        <article class="item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aspernatur eaque velit
-            repellat, nobis sed dignissimos cumque odio nisi sit inventore assumenda asperiores, quod ipsa earum
-            voluptas deserunt repudiandae quia.</article>
-        <article class="item2">Item3</article>
-        <article class="item2">Item4</article>
-        <article class="item2">Item5</article>
-        <article class="item2">Item6</article>
-        <article class="item2">Item7</article>
-        <article class="item2">Item8</article>
-        <article class="item2">Item9</article>
-        <article class="item2">Item10</article>
-        <article class="item2">Item11</article>
-        <article class="item2">Item12</article>
+        <header>Header</header>
+        <main>
+            <article class="item3">Item1</article>
+            <article class="item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aspernatur eaque velit
+                repellat, nobis sed dignissimos cumque odio nisi sit inventore assumenda asperiores, quod ipsa earum
+                voluptas deserunt repudiandae quia.</article>
+            <article class="item2">Item3</article>
+            <article class="item2">Item4</article>
+            <article class="item2">Item5</article>
+            <article class="item2">Item6</article>
+            <article class="item2">Item7</article>
+            <article class="item2">Item8</article>
+            <article class="item2">Item9</article>
+            <article class="item2">Item10</article>
+            <article class="item2">Item11</article>
+            <article class="item2">Item12</article>
+        </main>
+        <aside>Sidebar</aside>
+        <footer>Footer</footer>
+
     </div>
 </body>
 
